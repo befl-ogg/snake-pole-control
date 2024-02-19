@@ -1,0 +1,78 @@
+---
+import UserIcon from "../assets/icons/usersvg.astro";
+import PassIcon from "../assets/icons/passsvg.astro";
+import Logo from "../assets/commons/Logo.astro";
+---
+
+<div class="max-w-sm mx-auto h-screen flex flex-col justify-center">
+  <div class="flex flex-row justify-center"><Logo ancho="200px" /></div>
+  <div class="w-full flex flex-col justify-center text-white text-center py-10">
+    <div class="text-4xl">Snake Pole Control</div>
+    <div>Bienvenido</div>
+  </div>
+  <form class="login-form" method="POST">
+    <div>
+      <div class="mb-5">
+        <div class="relative">
+          <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+            <UserIcon />
+          </div>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Nombre de usuario"
+            required
+          />
+          <!-- {errors.email && <p>{errors.email}</p>} -->
+        </div>
+      </div>
+      <div class="mb-5">
+        <div class="relative">
+          <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+            <PassIcon />
+          </div>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Contraseña"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            required
+          />
+          <!-- {errors.password && <p>{errors.password}</p>} -->
+        </div>
+      </div>
+      <div class="mb-5 flex justify-center">
+        <button
+          id="submit"
+          type="submit"
+          class="button text-white bg-[#349A8D] hover:bg-[#8D366F] focus:ring-4 focus:outline-none focus:bg-[#349A8D] font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center"
+          >Entrar</button
+        >
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+  // variables
+  const usernameInput: HTMLButtonElement = document.querySelector("#username")!;
+  const passwordInput: HTMLButtonElement = document.querySelector("#password")!;
+  const submitButton = document.querySelector("#submit")!;
+
+  // execution
+  // notification.style.display = 'none'
+
+  submitButton.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    if (usernameInput.value === "admin" && passwordInput.value === "2024spf.") {
+      localStorage.setItem("isLoggedIn", "true");
+      window.location.href = "/home";
+    } else {
+      // notification.style.display = 'flex'
+    }
+  });
+</script>

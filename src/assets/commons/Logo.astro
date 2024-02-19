@@ -1,0 +1,11 @@
+---
+interface Props {
+  ancho: string;
+}
+
+const { ancho } = Astro.props;
+---
+
+<img src="https://i.imgur.com/Hg2usab.png" alt="Logo" class="logo" style={`height: auto; width: ${ancho}`} />
+
+<style></style>

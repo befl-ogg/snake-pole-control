@@ -1,0 +1,44 @@
+---
+import OutflowIcon from "@/assets/icons/outflowIcon.astro";
+import type { Menu } from "@catalogs/itemsMenu";
+import AlumnosIcon from "@icons/alumnosIcon.astro";
+import CalendarIcon from "@icons/calendarIcon.astro";
+import IncomeIcon from "@icons/incomeIcon.astro";
+import InventoryIcon from "@icons/inventoryIcon.astro";
+import PencilIcon from "@icons/pencilIcon.astro";
+import ReceiptIcon from "@icons/receiptIcon.astro";
+import WalletIcon from "@icons/walletIcon.astro";
+
+interface Props {
+  itemsMenu: Menu;
+}
+
+const { itemsMenu } = Astro.props;
+const { sectionName, items } = itemsMenu;
+---
+
+<a class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group dark:text-white">
+  <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">{sectionName}</span>
+</a>
+<ul class="py-2 space-y-2 px-5">
+  {
+    items?.map((item) => (
+      <li>
+        <a
+          href={item.url}
+          class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+        >
+          {item.icon === "alumnosIcon" && <AlumnosIcon />}
+          {item.icon === "calendarIcon" && <CalendarIcon />}
+          {item.icon === "outflowIcon" && <OutflowIcon />}
+          {item.icon === "incomeIcon" && <IncomeIcon />}
+          {item.icon === "inventoryIcon" && <InventoryIcon />}
+          {item.icon === "pencilIcon" && <PencilIcon />}
+          {item.icon === "receiptIcon" && <ReceiptIcon />}
+          {item.icon === "walletIcon" && <WalletIcon />}
+          <span class="flex-1 ms-3 whitespace-nowrap">{item.name}</span>
+        </a>
+      </li>
+    ))
+  }
+</ul>
