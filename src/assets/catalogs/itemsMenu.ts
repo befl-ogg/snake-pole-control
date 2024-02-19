@@ -19,49 +19,49 @@ export const sidebarMenu: Menu[] = [
         items: [
             {
                 name: "Alumnos",
-                url: "#",
+                url: "/admin/alumnos",
                 icon: "alumnosIcon"
             },
             {
                 name: "Clases",
-                url: "#",
+                url: "/admin/clases",
                 icon: "pencilIcon"
             },
             {
                 name: "Horarios",
-                url: "#",
+                url: "/admin/horarios",
                 icon: "calendarIcon"
             },
             {
                 name: "Inventario",
-                url: "#",
+                url: "/admin/inventario",
                 icon: "inventoryIcon"
             },
             {
                 name: "Ingresos",
-                url: "#",
+                url: "/admin/ingresos",
                 icon: "incomeIcon"
             },
             {
                 name: "Egresos",
-                url: "#",
+                url: "/admin/egresos",
                 icon: "outflowIcon"
             }
         ]
     }, 
     {
         sectionName: "Punto de Venta",
-        url: "#",
-        icon: "usersvg",
+        url: "",
+        icon: "",
         items: [
             {
                 name: "Mostrador",
-                url: "#",
+                url: "/ventas/mostrador",
                 icon: "receiptIcon"
             },
             {
                 name: "Especializada",
-                url: "#",
+                url: "/ventas/especializada",
                 icon: "walletIcon"
             }
         ]
