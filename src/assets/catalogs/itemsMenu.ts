@@ -34,7 +34,7 @@ export const sidebarMenu: Menu[] = [
             },
             {
                 name: "Inventario",
-                url: "/admin/inventario",
+                url: "/admin/inventario/dashboard",
                 icon: "inventoryIcon"
             },
             {
