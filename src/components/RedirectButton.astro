@@ -7,19 +7,16 @@ interface Props {
 const { href, title } = Astro.props;
 ---
 
-<li class="link-card">
+<div>
   <a href={href}>
-    <h2>
-      {title}
-      <span>&rarr;</span>
-    </h2>
+    <p>{title}</p>
   </a>
-</li>
+</div>
+
 <style>
   .link-card {
     list-style: none;
     display: flex;
-    height: min-content;
     padding: 1px;
     background-color: #23262d;
     background-image: none;

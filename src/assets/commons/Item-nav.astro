@@ -6,6 +6,7 @@ import CalendarIcon from "@icons/calendarIcon.astro";
 import IncomeIcon from "@icons/incomeIcon.astro";
 import InventoryIcon from "@icons/inventoryIcon.astro";
 import PencilIcon from "@icons/pencilIcon.astro";
+import ProductIcon from "@icons/productIcon.astro";
 import ReceiptIcon from "@icons/receiptIcon.astro";
 import WalletIcon from "@icons/walletIcon.astro";
 
@@ -34,6 +35,7 @@ const { sectionName, items } = itemsMenu;
           {item.icon === "incomeIcon" && <IncomeIcon />}
           {item.icon === "inventoryIcon" && <InventoryIcon />}
           {item.icon === "pencilIcon" && <PencilIcon />}
+          {item.icon === "productIcon" && <ProductIcon />}
           {item.icon === "receiptIcon" && <ReceiptIcon />}
           {item.icon === "walletIcon" && <WalletIcon />}
           <span class="flex-1 ms-3 whitespace-nowrap">{item.name}</span>

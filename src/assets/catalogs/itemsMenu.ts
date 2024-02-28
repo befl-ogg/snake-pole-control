@@ -33,8 +33,13 @@ export const sidebarMenu: Menu[] = [
                 icon: "calendarIcon"
             },
             {
+                name: "Productos",
+                url: "/admin/inventario/productos",
+                icon: "productIcon"
+            },
+            {
                 name: "Inventario",
-                url: "/admin/inventario/dashboard",
+                url: "/admin/inventario/inventario",
                 icon: "inventoryIcon"
             },
             {

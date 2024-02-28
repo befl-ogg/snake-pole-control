@@ -1,8 +1,15 @@
 ---
+import Card from "@components/Card.astro";
 import ProductTable from "@components/products/ProductTable.astro";
 import Layout from "@layouts/Layout.astro";
 ---
 
 <Layout title="Dashboard Inventario">
-  <ProductTable />
+  <div class="w-full flex flex-col justify-center items-center">
+    <div class="py-10 flex flex-row gap-10">
+      <Card title="Catálogo de productos" href="" />
+      <Card title="Inventario Carranza" href="" />
+    </div>
+    <ProductTable />
+  </div>
 </Layout>
