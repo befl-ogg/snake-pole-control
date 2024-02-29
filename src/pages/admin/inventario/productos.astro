@@ -1,10 +1,10 @@
 ---
-import ProductTable from "@components/products/ProductTable.astro";
+import InventoryTable from "@components/products/InventoryTable.tsx";
 import Layout from "@layouts/Layout.astro";
 ---
 
 <Layout title="Dashboard Inventario">
   <div class="w-full flex flex-col justify-center items-center">
-    <ProductTable />
+    <InventoryTable client:load />
   </div>
 </Layout>
